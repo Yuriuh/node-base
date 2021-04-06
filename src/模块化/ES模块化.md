@@ -1,0 +1,8 @@
+- 目前，Node中的ES模块化仍然处于实验阶段
+- 模块化标准
+  - commonjs
+    - 默认
+  - es
+    - 文件后缀名为.mjs
+    - 最近的 package.json 中的 type 的值是 module
+- 当使用ES模块化运行时，必须添加 --experimental-modules 标记
