@@ -24,6 +24,4 @@ function require(modulePath) {
   const exports = module.exports
   wrap.call(module.exports, module, exports, require, module.path, module.filename)
 }
-
-
 ```
