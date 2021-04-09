@@ -13,6 +13,7 @@ async function readFile(filename) {
       files.forEach((file, index) => {
         const f = join(filename, file)
         console.log('f', f)
+        console.log('index', index)
         readFile(f)
       })
     } else if (stat.isFile) {
