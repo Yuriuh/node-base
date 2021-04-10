@@ -3,7 +3,7 @@ const { join } = require('path')
 const joinCurrentPath = f => join(__dirname, f)
 const sleep = d => new Promise(r => setTimeout(r, d))
 
-const filename = joinCurrentPath('./a.txt')
+const filename = joinCurrentPath('./read.txt')
 
 async function main() {
   const rs = await createReadStream(filename, {
