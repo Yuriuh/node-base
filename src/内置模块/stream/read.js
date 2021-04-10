@@ -1,6 +1,5 @@
-const { createReadStream, fstat } = require('fs')
+const { createReadStream } = require('fs')
 const { join } = require('path')
-
 const joinCurrentPath = f => join(__dirname, f)
 const sleep = d => new Promise(r => setTimeout(r, d))
 
