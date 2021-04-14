@@ -1,7 +1,7 @@
 const net = require('net')
 
-const host = 'duyi.ke.qq.com'
-// const host = 'cn.bing.com'
+// const host = 'duyi.ke.qq.com'
+const host = 'cn.bing.com'
 
 const socket = net.createConnection(
   {
@@ -13,7 +13,6 @@ const socket = net.createConnection(
   }
 )
 
-let isFirst = true
 let receive = null
 
 const parseResponse = response => {
@@ -34,16 +33,27 @@ const parseResponse = response => {
   }
 }
 
+function isOver() {
+  const contentLength = Number(receive.header['Content-Length'])
+  const currentReceivedLength = Buffer.from(receive.body, 'utf-8').byteLength
+  return currentReceivedLength >= contentLength
+}
+
 socket.on('data', chunk => {
   const response = chunk.toString('utf-8')
-  // if (!receive) {
-
-  // }
-  if (isFirst) {
-    parseResponse(response)
-    isFirst = false
+  // 第一次接收数据
+  if (!receive) {
+    receive = parseResponse(response)
+    if (isOver()) {
+      socket.end()
+    }
+    return
   }
-  socket.end()
+  receive.body += response
+  if (isOver()) {
+    socket.end()
+    return
+  }
 })
 
 socket.write(`GET / HTTP/1.1
@@ -53,5 +63,6 @@ Connection: keep-alive
 `)
 
 socket.on('close', () => {
+  console.log('receive body', receive.body)
   console.log('socket closed')
 })
