@@ -1,3 +1,7 @@
+// 客户端
+// 请求: ClientRequest 对象
+// 响应: IncomingMessage 对象
+
 const http = require('http')
 
 const url = 'http://www.baidu.com/'
