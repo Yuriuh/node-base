@@ -23,7 +23,7 @@ const serverListener = async (req, res) => {
   const parsedUrl = new URL(req.url, baseURL)
   const { pathname } = parsedUrl
   const filename = joinPublicPath(pathname.slice(1))
-  const { ok, data, error } = await readFile(filename)
+  const { ok, data } = await readFile(filename)
   if (ok) {
     res.end(data)
   } else {
