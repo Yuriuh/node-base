@@ -21,15 +21,3 @@ docker exec -it mysql bash
 ```
 mysql -u root -p
 ```
-
-### 查看编码
-
-```
-show variables like 'character_set\_%';
-```
-
-### 查看数据库
-
-```
-show databases;
-```

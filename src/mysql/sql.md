@@ -1,3 +1,15 @@
+### 查看编码
+
+```
+show variables like 'character_set\_%';
+```
+
+### 查看数据库
+
+```
+show databases;
+```
+
 ### 创建数据库
 
 ```
@@ -15,6 +27,9 @@ use 数据库名;
 ```
 show 数据库名;
 ```
+
+### 删除数据库
+DROP DATABASE 数据库名;
 
 ### 查看数据表
 
