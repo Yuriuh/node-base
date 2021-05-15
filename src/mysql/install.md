@@ -4,6 +4,10 @@
 docker pull mysql:latest
 ```
 
+```
+docker pull postgres:latest
+```
+
 ### 启动 mysql 进程
 
 ```
@@ -20,8 +24,16 @@ docker run -itd --name postgres -p 5432:5432 -e POSTGRES_USER=root -e POSTGRES_H
 docker exec -it mysql bash
 ```
 
+```
+docker exec -it postgres bash
+```
+
 ### 以管理员身份登录
 
 ```
 mysql -u root -p
+```
+
+```
+postgres -u root -p
 ```
