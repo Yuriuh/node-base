@@ -1,56 +1,37 @@
-### 查看编码
+### 查询数据
 
-```
-show variables like 'character_set\_%';
-```
+#### 查询
 
-### 查看数据库
+- 检索单个列
 
-```
-show databases;
+```sql
+SELECT prod_name FROM Products
 ```
 
-### 创建数据库
+- 检索多个列
 
-```
-CREATE DATABASE 数据库名;
-```
-
-### 使用数据库
-
-```
-use 数据库名;
+```sql
+SELECT prod_id, prod_name, prod_price FROM Products;
 ```
 
-### 查看数据库
+- 检索所有列
 
-```
-show 数据库名;
-```
-
-### 删除数据库
-DROP DATABASE 数据库名;
-
-### 查看数据表
-
-```
-show 表名;
+```sql
+SELECT * FROM Products;
 ```
 
-### 查看列信息
+- 检索不同的值
 
-```
-show columns from 表名;
-```
-
-### 查看索引
-
-```
-show index from 表名;
+```sql
+SELECT DISTINCT vend_id FROM Products;
 ```
 
-### 查看统计信息
+- 限制结果
 
+```sql
+SELECT prod_name FROM Products LIMIT 5;
 ```
-show table status from 数据库名;
+
+```sql
+SELECT prod_name FROM Products LIMIT 5 OFFSET 5;
 ```
