@@ -50,9 +50,13 @@ SELECT prod_name FROM Products ORDER BY prod_name;
 SELECT prod_id, prod_price, prod_name FROM Products ORDER BY prod_price, prod_name;
 ```
 
+- 按列位置顺序
+
 ```sql
 SELECT prod_id, prod_price, prod_name FROM Products ORDER BY 2, 3;
 ```
+
+- 指定排序方向
 
 ```sql
 SELECT prod_id, prod_price, prod_name FROM Products ORDER BY prod_price DESC;
