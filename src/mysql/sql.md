@@ -65,3 +65,19 @@ SELECT prod_id, prod_price, prod_name FROM Products ORDER BY prod_price DESC;
 ```sql
 SELECT prod_id, prod_price, prod_name FROM Products ORDER BY prod_price DESC, prod_name;
 ```
+
+#### 过滤
+
+- 操作符
+
+```
+=
+<> !=
+<
+>
+<=
+>=
+BETWEEN
+IS NULL
+```
+
