@@ -68,7 +68,7 @@ SELECT prod_id, prod_price, prod_name FROM Products ORDER BY prod_price DESC, pr
 
 #### 过滤
 
-- 操作符
+##### 操作符
 
 ```
 =
@@ -81,3 +81,27 @@ BETWEEN
 IS NULL
 ```
 
+##### 基本过滤
+- 检查单个值
+
+```sql
+SELECT prod_name, prod_price FROM Products WHERE prod_price < 10;
+```
+
+- 不匹配检查
+
+```sql
+SELECT vend_id, prod_name FROM Products WHERE vend_id <> 'DLL01';
+```
+
+- 范围值检查
+
+```sql
+SELECT prod_name, prod_price FROM Products WHERE prod_price BETWEEN 5 AND 10;
+```
+
+- 空值检查
+
+```sql
+SELECT prod_name FROM Products WHERE prod_price IS NULL;
+```
