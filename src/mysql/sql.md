@@ -105,3 +105,11 @@ SELECT prod_name, prod_price FROM Products WHERE prod_price BETWEEN 5 AND 10;
 ```sql
 SELECT prod_name FROM Products WHERE prod_price IS NULL;
 ```
+
+##### 高级过滤
+
+- AND操作符
+
+```sql
+SELECT prod_id, prod_price, prod_name FROM Products WHERE vend_id = 'DLL01' AND prod_price <= 4;
+```
