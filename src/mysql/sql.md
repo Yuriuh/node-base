@@ -113,3 +113,9 @@ SELECT prod_name FROM Products WHERE prod_price IS NULL;
 ```sql
 SELECT prod_id, prod_price, prod_name FROM Products WHERE vend_id = 'DLL01' AND prod_price <= 4;
 ```
+
+- OR操作符
+
+```sql
+SELECT prod_id, prod_price, prod_name FROM Products WHERE vend_id = 'DLL01' OR vend_id = 'BRS01';
+```
