@@ -119,3 +119,9 @@ SELECT prod_id, prod_price, prod_name FROM Products WHERE vend_id = 'DLL01' AND 
 ```sql
 SELECT prod_id, prod_price, prod_name FROM Products WHERE vend_id = 'DLL01' OR vend_id = 'BRS01';
 ```
+
+- 括号操作符（优先级）
+
+```sql
+SELECT prod_name, prod_price FROM Products WHERE (vend_id = 'DLL01' OR vend_id = 'BRS01') AND prod_price >= 10;
+```
