@@ -125,3 +125,9 @@ SELECT prod_id, prod_price, prod_name FROM Products WHERE vend_id = 'DLL01' OR v
 ```sql
 SELECT prod_name, prod_price FROM Products WHERE (vend_id = 'DLL01' OR vend_id = 'BRS01') AND prod_price >= 10;
 ```
+
+- IN操作符
+
+```sql
+SELECT prod_name, prod_price FROM Products WHERE vend_id IN ('DLL01','BRS01') ORDER BY prod_name;
+```
