@@ -131,3 +131,9 @@ SELECT prod_name, prod_price FROM Products WHERE (vend_id = 'DLL01' OR vend_id =
 ```sql
 SELECT prod_name, prod_price FROM Products WHERE vend_id IN ('DLL01','BRS01') ORDER BY prod_name;
 ```
+
+- NOT操作符
+
+```sql
+SELECT prod_name, prod_price FROM Products WHERE vend_id NOT IN ('DLL01','BRS01') ORDER BY prod_name;
+```
