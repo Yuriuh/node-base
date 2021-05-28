@@ -137,3 +137,14 @@ SELECT prod_name, prod_price FROM Products WHERE vend_id IN ('DLL01','BRS01') OR
 ```sql
 SELECT prod_name, prod_price FROM Products WHERE vend_id NOT IN ('DLL01','BRS01') ORDER BY prod_name;
 ```
+
+##### 通配符过滤
+
+- LIKE操作符
+  - 百分号（%）：任意字符，可多可少
+
+```sql
+SELECT prod_id, prod_name FROM Products WHERE prod_name LIKE 'Fish%';
+
+SELECT prod_id, prod_name FROM Products WHERE prod_name LIKE '%bean bag%';
+```
