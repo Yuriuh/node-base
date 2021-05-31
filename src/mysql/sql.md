@@ -156,3 +156,10 @@ SELECT prod_id, prod_name FROM Products WHERE prod_name LIKE '__ inch teddy bear
 
 SELECT prod_id, prod_name FROM Products WHERE prod_name LIKE '% inch teddy bear';
 ```
+
+- REGEXP操作符
+  - ^[]：以列表中的某个字符开头
+
+```sql
+SELECT cust_contact FROM Customers WHERE cust_contact REGEXP '^[JM]' ORDER BY cust_contact;
+```
