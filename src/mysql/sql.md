@@ -163,3 +163,8 @@ SELECT prod_id, prod_name FROM Products WHERE prod_name LIKE '% inch teddy bear'
 ```sql
 SELECT cust_contact FROM Customers WHERE cust_contact REGEXP '^[JM]' ORDER BY cust_contact;
 ```
+
+- 技巧
+  - 避免过度使用
+  - 避免用在搜索模式的开始处
+  - 注意通配符的位置
