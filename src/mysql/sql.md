@@ -168,3 +168,11 @@ SELECT cust_contact FROM Customers WHERE cust_contact REGEXP '^[JM]' ORDER BY cu
   - 避免过度使用
   - 避免用在搜索模式的开始处
   - 注意通配符的位置
+
+#### 计算
+
+##### 计算字段
+
+##### 拼接字段
+
+##### 执行算术计算
