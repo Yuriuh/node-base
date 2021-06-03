@@ -173,6 +173,8 @@ SELECT cust_contact FROM Customers WHERE cust_contact REGEXP '^[JM]' ORDER BY cu
 
 ##### 计算字段
 
+- 计算字段是运行时在`SELECT`语句内创建的
+
 ##### 拼接字段
 
 ##### 执行算术计算
