@@ -177,4 +177,7 @@ SELECT cust_contact FROM Customers WHERE cust_contact REGEXP '^[JM]' ORDER BY cu
 
 ##### 拼接字段
 
+- 定义：拼接（concatenate）：将值联结到一起构成单个值
+- 例子
+
 ##### 执行算术计算
