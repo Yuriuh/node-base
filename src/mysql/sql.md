@@ -180,4 +180,8 @@ SELECT cust_contact FROM Customers WHERE cust_contact REGEXP '^[JM]' ORDER BY cu
 - 定义：拼接（concatenate）：将值联结到一起构成单个值
 - 例子
 
+```sql
+SELECT Concat(vend_name, ' (', vend_country, ')') FROM Vendors ORDER BY vend_name;
+```
+
 ##### 执行算术计算
