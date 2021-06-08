@@ -184,4 +184,12 @@ SELECT cust_contact FROM Customers WHERE cust_contact REGEXP '^[JM]' ORDER BY cu
 SELECT Concat(vend_name, ' (', vend_country, ')') FROM Vendors ORDER BY vend_name;
 ```
 
+```sql
+SELECT Concat(RTRIM(vend_name), ' (', RTRIM(vend_country), ')') FROM Vendors ORDER BY vend_name;
+```
+
+```sql
+SELECT Concat(RTRIM(vend_name), ' (', RTRIM(vend_country), ')') AS vend_title FROM Vendors ORDER BY vend_name;
+```
+
 ##### 执行算术计算
