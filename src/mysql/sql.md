@@ -193,3 +193,12 @@ SELECT Concat(RTRIM(vend_name), ' (', RTRIM(vend_country), ')') AS vend_title FR
 ```
 
 ##### 执行算术计算
+
+- 算术操作符
+  - + - * /
+
+- 例子
+
+```sql
+SELECT prod_id, quantity, item_price, quantity*item_price AS expanded_price FROM OrderItems WHERE order_num = 20008;
+```
