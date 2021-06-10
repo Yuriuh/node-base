@@ -202,3 +202,24 @@ SELECT Concat(RTRIM(vend_name), ' (', RTRIM(vend_country), ')') AS vend_title FR
 ```sql
 SELECT prod_id, quantity, item_price, quantity*item_price AS expanded_price FROM OrderItems WHERE order_num = 20008;
 ```
+
+#### 函数
+
+##### 问题
+
+- 每一个DBMS都有特定的函数，SQL函数是不可移植的
+
+##### 使用函数
+
+- 文本处理函数
+  - 常用函数
+    - LEFT()
+    - LENGTH()
+    - LOWER()
+    - LTRIM()
+    - RIGHT()
+    - RTRIM()
+    - SUBSTRING()
+    - SOUNDEX()
+    - UPPER()
+  - 例子：
