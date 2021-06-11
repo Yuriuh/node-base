@@ -223,3 +223,11 @@ SELECT prod_id, quantity, item_price, quantity*item_price AS expanded_price FROM
     - SOUNDEX()
     - UPPER()
   - 例子：
+
+```sql
+SELECT cust_name, cust_contact FROM Customers WHERE cust_contact = 'Michael Green';
+```
+
+```sql
+SELECT cust_name, cust_contact FROM Customers WHERE SOUNDEX(cust_contact) = SOUNDEX('Michael Green');
+```
