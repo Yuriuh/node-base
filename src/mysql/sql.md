@@ -231,3 +231,12 @@ SELECT cust_name, cust_contact FROM Customers WHERE cust_contact = 'Michael Gree
 ```sql
 SELECT cust_name, cust_contact FROM Customers WHERE SOUNDEX(cust_contact) = SOUNDEX('Michael Green');
 ```
+
+- 日期和时间处理函数
+  - 常用函数
+    - YEAR()
+    - MONTH()
+
+```sql
+SELECT order_num FROM Orders WHERE YEAR(order_date) = 2020;
+```
