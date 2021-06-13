@@ -240,3 +240,13 @@ SELECT cust_name, cust_contact FROM Customers WHERE SOUNDEX(cust_contact) = SOUN
 ```sql
 SELECT order_num FROM Orders WHERE YEAR(order_date) = 2020;
 ```
+
+- 数值处理函数
+  - 常用函数
+    - ABS()：返回一个数的绝对值
+    - COS()：返回一个角度的余弦
+    - EXP()：返回一个数的指数值
+    - PI()：返回圆周率π的值
+    - SIN()：返回一个角度的正弦
+    - SQRT()：返回一个数的平方根
+    - TAN()：返回一个角度的正切
