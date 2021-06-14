@@ -250,3 +250,11 @@ SELECT order_num FROM Orders WHERE YEAR(order_date) = 2020;
     - SIN()：返回一个角度的正弦
     - SQRT()：返回一个数的平方根
     - TAN()：返回一个角度的正切
+
+#### 汇总
+
+##### 聚集函数
+
+- 定义：对某行运行的函数，计算并返回一个值
+
+- 常用函数
