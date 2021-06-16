@@ -258,3 +258,8 @@ SELECT order_num FROM Orders WHERE YEAR(order_date) = 2020;
 - 定义：对某行运行的函数，计算并返回一个值
 
 - 常用函数
+  - AVG()
+  - COUNT()
+  - MAX()
+  - MIN()
+  - SUM()
