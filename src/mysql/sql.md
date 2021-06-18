@@ -263,3 +263,15 @@ SELECT order_num FROM Orders WHERE YEAR(order_date) = 2020;
   - MAX()
   - MIN()
   - SUM()
+
+##### 聚集不同值
+
+- DISTINCT
+  - 例子：
+
+```sql
+SELECT AVG(DISTINCT prod_price) AS avg_price FROM Products WHERE vend_id = 'DLL01';
+```
+  - 注意：
+    - 不能用于COUNT(*)
+    - 用于MIN()和MAX()没有意义
