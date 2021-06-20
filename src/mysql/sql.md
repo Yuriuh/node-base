@@ -259,6 +259,15 @@ SELECT order_num FROM Orders WHERE YEAR(order_date) = 2020;
 
 - 常用函数
   - AVG()
+
+```sql
+SELECT AVG(prod_price) AS avg_price FROM Products;
+```
+
+```sql
+SELECT AVG(prod_price) AS avg_price FROM Products WHERE vend_id = 'DLL01';
+```
+
   - COUNT()
   - MAX()
   - MIN()
