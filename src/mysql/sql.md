@@ -279,6 +279,11 @@ SELECT COUNT(cust_email) AS num_cust FROM Customers;
 ```
 
   - MAX()
+
+```sql
+SELECT MAX(prod_price) AS max_price FROM Products;
+```
+
   - MIN()
   - SUM()
 
