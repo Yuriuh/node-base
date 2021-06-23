@@ -285,7 +285,20 @@ SELECT MAX(prod_price) AS max_price FROM Products;
 ```
 
   - MIN()
+
+```sql
+SELECT MIN(prod_price) AS min_price FROM Products;
+```
+
   - SUM()
+
+```sql
+SELECT SUM(quantity) AS items_ordered FROM OrderItems WHERE order_num = 20005;
+```
+
+```sql
+SELECT SUM(item_price*quantity) AS total_price FROM OrderItems WHERE order_num = 20005;
+```
 
 ##### 聚集不同值
 
@@ -295,6 +308,7 @@ SELECT MAX(prod_price) AS max_price FROM Products;
 ```sql
 SELECT AVG(DISTINCT prod_price) AS avg_price FROM Products WHERE vend_id = 'DLL01';
 ```
+
   - 注意：
     - 不能用于COUNT(*)
     - 用于MIN()和MAX()没有意义
