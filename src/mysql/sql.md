@@ -82,6 +82,7 @@ IS NULL
 ```
 
 ##### 基本过滤
+
 - 检查单个值
 
 ```sql
@@ -108,13 +109,13 @@ SELECT prod_name FROM Products WHERE prod_price IS NULL;
 
 ##### 高级过滤
 
-- AND操作符
+- AND 操作符
 
 ```sql
 SELECT prod_id, prod_price, prod_name FROM Products WHERE vend_id = 'DLL01' AND prod_price <= 4;
 ```
 
-- OR操作符
+- OR 操作符
 
 ```sql
 SELECT prod_id, prod_price, prod_name FROM Products WHERE vend_id = 'DLL01' OR vend_id = 'BRS01';
@@ -126,13 +127,13 @@ SELECT prod_id, prod_price, prod_name FROM Products WHERE vend_id = 'DLL01' OR v
 SELECT prod_name, prod_price FROM Products WHERE (vend_id = 'DLL01' OR vend_id = 'BRS01') AND prod_price >= 10;
 ```
 
-- IN操作符
+- IN 操作符
 
 ```sql
 SELECT prod_name, prod_price FROM Products WHERE vend_id IN ('DLL01','BRS01') ORDER BY prod_name;
 ```
 
-- NOT操作符
+- NOT 操作符
 
 ```sql
 SELECT prod_name, prod_price FROM Products WHERE vend_id NOT IN ('DLL01','BRS01') ORDER BY prod_name;
@@ -140,7 +141,7 @@ SELECT prod_name, prod_price FROM Products WHERE vend_id NOT IN ('DLL01','BRS01'
 
 ##### 通配符过滤
 
-- LIKE操作符
+- LIKE 操作符
   - 百分号（%）：任意字符，可多可少
 
 ```sql
@@ -149,7 +150,7 @@ SELECT prod_id, prod_name FROM Products WHERE prod_name LIKE 'Fish%';
 SELECT prod_id, prod_name FROM Products WHERE prod_name LIKE '%bean bag%';
 ```
 
-  - 下划线（_）：任意字符，单个
+- 下划线（\_）：任意字符，单个
 
 ```sql
 SELECT prod_id, prod_name FROM Products WHERE prod_name LIKE '__ inch teddy bear';
@@ -157,7 +158,7 @@ SELECT prod_id, prod_name FROM Products WHERE prod_name LIKE '__ inch teddy bear
 SELECT prod_id, prod_name FROM Products WHERE prod_name LIKE '% inch teddy bear';
 ```
 
-- REGEXP操作符
+- REGEXP 操作符
   - ^[]：以列表中的某个字符开头
 
 ```sql
@@ -195,7 +196,8 @@ SELECT Concat(RTRIM(vend_name), ' (', RTRIM(vend_country), ')') AS vend_title FR
 ##### 执行算术计算
 
 - 算术操作符
-  - + - * /
+
+  - - - - /
 
 - 例子
 
@@ -207,7 +209,7 @@ SELECT prod_id, quantity, item_price, quantity*item_price AS expanded_price FROM
 
 ##### 问题
 
-- 每一个DBMS都有特定的函数，SQL函数是不可移植的
+- 每一个 DBMS 都有特定的函数，SQL 函数是不可移植的
 
 ##### 使用函数
 
@@ -246,7 +248,7 @@ SELECT order_num FROM Orders WHERE YEAR(order_date) = 2020;
     - ABS()：返回一个数的绝对值
     - COS()：返回一个角度的余弦
     - EXP()：返回一个数的指数值
-    - PI()：返回圆周率π的值
+    - PI()：返回圆周率 π 的值
     - SIN()：返回一个角度的正弦
     - SQRT()：返回一个数的平方根
     - TAN()：返回一个角度的正切
@@ -268,7 +270,7 @@ SELECT AVG(prod_price) AS avg_price FROM Products;
 SELECT AVG(prod_price) AS avg_price FROM Products WHERE vend_id = 'DLL01';
 ```
 
-  - COUNT()
+- COUNT()
 
 ```sql
 SELECT COUNT(*) AS num_cust FROM Customers;
@@ -278,19 +280,19 @@ SELECT COUNT(*) AS num_cust FROM Customers;
 SELECT COUNT(cust_email) AS num_cust FROM Customers;
 ```
 
-  - MAX()
+- MAX()
 
 ```sql
 SELECT MAX(prod_price) AS max_price FROM Products;
 ```
 
-  - MIN()
+- MIN()
 
 ```sql
 SELECT MIN(prod_price) AS min_price FROM Products;
 ```
 
-  - SUM()
+- SUM()
 
 ```sql
 SELECT SUM(quantity) AS items_ordered FROM OrderItems WHERE order_num = 20005;
@@ -309,21 +311,13 @@ SELECT SUM(item_price*quantity) AS total_price FROM OrderItems WHERE order_num =
 SELECT AVG(DISTINCT prod_price) AS avg_price FROM Products WHERE vend_id = 'DLL01';
 ```
 
-  - 注意：
-    - 不能用于COUNT(*)
-    - 用于MIN()和MAX()没有意义
+- 注意：
+  - 不能用于 COUNT(\*)
+  - 用于 MIN()和 MAX()没有意义
 
 ##### 组合聚集函数
 
 - 例子
-
-```sql
-SELECT COUNT(*) AS num_items, MIN(prod_price) AS price_min, MAX(prod_price) AS price_max, AVG(prod_price) AS price_avg FROM Products;
-```
-
-#### 组合聚集函数
-
-- 例子：
 
 ```sql
 SELECT COUNT(*) AS num_items, MIN(prod_price) AS price_min, MAX(prod_price) AS price_max, AVG(prod_price) AS price_avg FROM Products;
