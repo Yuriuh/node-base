@@ -322,3 +322,9 @@ SELECT AVG(DISTINCT prod_price) AS avg_price FROM Products WHERE vend_id = 'DLL0
 ```sql
 SELECT COUNT(*) AS num_items, MIN(prod_price) AS price_min, MAX(prod_price) AS price_max, AVG(prod_price) AS price_avg FROM Products;
 ```
+
+### 插入数据
+
+### 更新数据
+
+### 删除数据
